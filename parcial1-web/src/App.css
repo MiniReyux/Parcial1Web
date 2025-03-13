@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  background-image: url("https://unsplash.com/es/fotos/persona-nadando-en-el-mar-2lDtnHgiQzc");
+  background-size: cover;   /* Cover the entire viewport */
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
