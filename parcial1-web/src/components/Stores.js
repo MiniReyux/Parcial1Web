@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import { FormattedMessage } from "react-intl";
 
 function Stores () {
 
@@ -14,7 +14,7 @@ function Stores () {
 
     return(
         <div>
-            <h1>STORES</h1>
+            <h1><FormattedMessage id="stores_caps"/></h1>
         </div>
     );
 }

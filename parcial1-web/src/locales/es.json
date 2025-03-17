@@ -1,8 +1,11 @@
 {
     "menu_caps": "MENÚ",
     "stores_caps": "TIENDAS",
+    "cart_caps": "CARRITO",
     "slogan": "MUY BUENO PARA DEJARLO IR",
     "slogan_sub": "SOLUCIÓN PARA EL GASTO DE ALIMENTOS",
     "forgot_psswd": "¿Olvidaste tu contraseña?",
-    "log_in": "Iniciar sesión"
+    "log_in": "Iniciar sesión",
+    "user": "Usuario",
+    "password": "Contraseña"
 }

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
+import { FormattedMessage } from "react-intl";
 
 const backgroundStyle = {
     backgroundImage:"url('https://images.unsplash.com/photo-1466637574441-749b8f19452f?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
@@ -27,9 +28,9 @@ function Home () {
     return (
         <div style={backgroundStyle}>
             <div className="row">
-                <button onClick={clickMenu}><img src={ require('../data/noun-food-7543523.png') } alt="my image" width="50px" />MENU</button>
-                <button onClick={clickStores}><img src={ require('../data/noun-food-7543523.png') } alt="my image" width="50px" />STORES</button>
-                <button onClick={clickCart}><img src={ require('../data/noun-food-7543523.png') } width="50px" />CART</button>
+                <button onClick={clickMenu}><img src={ require('../data/noun-food-7543523.png') } alt="my image" width="50px" /><FormattedMessage id="menu_caps"/></button>
+                <button onClick={clickStores}><img src={ require('../data/noun-food-7543523.png') } alt="my image" width="50px" /><FormattedMessage id="stores_caps"/></button>
+                <button onClick={clickCart}><img src={ require('../data/noun-food-7543523.png') } width="50px" /><FormattedMessage id="cart_caps"/></button>
             </div>
         </div>
     );

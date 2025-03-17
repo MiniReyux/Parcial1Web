@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import { FormattedMessage } from "react-intl";
 
 function Cart () {
     const [sessions, setSessions] = useState([]);
@@ -14,7 +14,7 @@ function Cart () {
 
     return(
         <div>
-            <h1>CART</h1>
+            <h1><FormattedMessage id="cart_caps"/></h1>
         </div>
     );
 }

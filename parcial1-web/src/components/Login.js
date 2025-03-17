@@ -1,6 +1,8 @@
 import { Form, InputGroup, Button } from 'react-bootstrap';
 import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
+import { FormattedMessage } from 'react-intl';
+import { useIntl } from "react-intl";
 
 const backgroundStyle = {
     backgroundPosition: "center",
@@ -29,6 +31,7 @@ function Login() {
     const [formValues, setFormValues] = useState({username:"", password:""});
     const [errors, setErrors] = useState({password: ""});
     const navigate = useNavigate();
+    const intl = useIntl(); 
 
     const handleUsernameChange = ((e) => {
         setFormValues({...formValues, username: e.target.value});
@@ -58,8 +61,8 @@ function Login() {
             <div className="flex-grow-1 d-flex text-center" >
                 <div >
                     <img src={ require('../data/noun-food-7543523.png') } width={"50px"}/>
-                    <h5>TOO GOOD TO GO</h5>
-                    <h6>FOOD WASTING SOLUTION</h6>
+                    <h5><FormattedMessage id="slogan"/></h5>
+                    <h6><FormattedMessage id="slogan_sub"/></h6>
                     <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" width="450px" />
                 </div>
                 <aside style={sideStyle}>
@@ -67,14 +70,14 @@ function Login() {
                     <div style={formStyle}>
                         <Form onSubmit={clickSubmit}>
                             <Form.Group>
-                                <Form.Control type='text' value={formValues.username} placeholder='Username' onChange={handleUsernameChange}>
+                                <Form.Control type='text' value={formValues.username} placeholder={intl.formatMessage({ id: "user"})} onChange={handleUsernameChange}>
 
                                 </Form.Control>
                             </Form.Group>
 
                             <Form.Group controlId="formBasicPassword">
                                 <InputGroup>
-                                    <Form.Control type="password" value={formValues.password} placeholder='password' onChange={handlePasswordChange}>
+                                    <Form.Control type="password" value={formValues.password} placeholder={intl.formatMessage({ id: "password"})} onChange={handlePasswordChange}>
 
                                     </Form.Control>
                                 </InputGroup>
@@ -82,11 +85,11 @@ function Login() {
                             </Form.Group>
 
                             <Button variant='link'>
-                                forgot password?
+                                <FormattedMessage id="forgot_psswd"/>
                             </Button>
 
                             <Button variant="primary" type="submit">
-                                Log in
+                                <FormattedMessage id="log_in"/>
                             </Button>
                         </Form>
                     </div>

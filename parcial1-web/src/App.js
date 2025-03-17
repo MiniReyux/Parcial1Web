@@ -4,6 +4,7 @@ import Home from "./components/Home";
 import Menu from "./components/Menu";
 import Stores from "./components/Stores";
 import Cart from "./components/Cart";
+import { Navigate } from "react-router-dom";
 import "./App.css";
 
 function App() {
@@ -11,7 +12,8 @@ function App() {
     <div className="body">
       <Router>
         <Routes>
-          <Route path="/" element={<Login />} />
+          <Route path="/" element={<Navigate to="/login" replace/>} />
+          <Route path="/login" element={<Login />} />
           <Route path="/home" element={<Home />} />
           <Route path="/menu" element={<Menu />} />
           <Route path="/stores" element={<Stores />} />

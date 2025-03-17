@@ -1,8 +1,11 @@
 {
     "menu_caps": "MENU",
     "stores_caps": "STORES",
+    "cart_caps": "CART",
     "slogan": "TOO GOOD TO GO",
     "slogan_sub": "FOOD WASTING SOLUTION",
     "forgot_psswd": "Forgot password?",
-    "log_in": "Log in"
+    "log_in": "Log in",
+    "user": "Username",
+    "password": "Password"
 }
