@@ -4,6 +4,7 @@
 tener instalado node.js
 # En la consola
 ``` cd .\parcial1-web\ ```
+
 ``` npm install ```
 
 ## Autor
